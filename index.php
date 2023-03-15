@@ -35,9 +35,9 @@ $stmt->execute();
     <body>
         <div class="container">
             <h1>Sistema de Viagens</h1>
-            <p><a href="form-add.php">Adicionar Viajem</a></p>
-            <h2>Lista de Viajens</h2>
-            <p>Total de viajens: <?php echo $total ?></p>
+            <p><a href="form-add.php">Adicionar Viagem</a></p>
+            <h2>Lista de Viagens</h2>
+            <p>Total de viagens: <?php echo $total ?></p>
             <?php if ($total > 0): ?>
             <table class="table table-striped" width="50%" border="1">
                 <thead>
@@ -50,12 +50,12 @@ $stmt->execute();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while ($viajens = $stmt->fecth(PDO::FECTH_ASSOC)): ?>
+                    <?php while ($viagens = $stmt->fecth(PDO::FECTH_ASSOC)): ?>
                     <tr>
-                        <td><?php echo $viajens['name'] ?></td>
-                        <td><?php echo $viajens['UF'] ?></td>
-                        <td><?php echo $viajens['ano'] ?></td>
-                        <td><?php echo $viajens['avaliacao'] ?></td>
+                        <td><?php echo $viagens['name'] ?></td>
+                        <td><?php echo $viagens['UF'] ?></td>
+                        <td><?php echo $viagens['ano'] ?></td>
+                        <td><?php echo $viagens['avaliacao'] ?></td>
                         <td>
                             <a href="form-edit-.php?id=<?php echo $user['id'] ?>">Editar</a>
                             <a href="delete.php?id=<?php echo $user['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
@@ -65,7 +65,7 @@ $stmt->execute();
                 </tbody>
             </table>
             <?php else: ?>
-            <p>Nenhuma viajem registrada</p>
+            <p>Nenhuma viagem registrada</p>
             <?php endif; ?>
         </div>
     </body>

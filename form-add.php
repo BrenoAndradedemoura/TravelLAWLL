@@ -19,4 +19,4 @@ require 'init.php';
             <label for="name">Cidade: </label>
             <input type="text" class="form-control col-sm" name="name" id="name" style="width:25%;" placeholder="Informe seu nome">
     </div>
-    <h4>
+
